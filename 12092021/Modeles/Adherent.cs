@@ -13,11 +13,10 @@ namespace _12092021.Modeles
         private string _prenom;
         private string _adresse;
 
-        
         #endregion
 
         #region Constructeurs
-public Adherent(int id, string nom, string prenom, string adresse)
+        public Adherent(int id, string nom, string prenom, string adresse)
         {
             Adherent.CollClasse.Add(this);
             _id = id;

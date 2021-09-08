@@ -14,6 +14,8 @@ namespace _12092021.Modeles
 
         private DateTime _laDate;
         private int _kmsRealises;
+        private Commercial _leCommercial;
+        private List<Visite> _lesVisites;
         #endregion
 
         #region Constructeurs
@@ -23,6 +25,7 @@ namespace _12092021.Modeles
             Tournee.CollClasse.Add(this);
             _laDate = laDate;
             _kmsRealises = kmsRealises;
+            _lesVisites = new List<Visite>();
         }
 
 
@@ -31,6 +34,8 @@ namespace _12092021.Modeles
         #region Getters/Setters
         public DateTime LaDate { get => _laDate; set => _laDate = value; }
         public int KmsRealises { get => _kmsRealises; set => _kmsRealises = value; }
+        public Commercial LeCommercial { get => _leCommercial; set => _leCommercial = value; }
+        public List<Visite> LesVisites { get => _lesVisites; set => _lesVisites = value; }
 
         #endregion
 
