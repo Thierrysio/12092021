@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _12092021.Modeles
 {
-    class Tournee
+    public  class Tournee
     {
         #region Attributs
 

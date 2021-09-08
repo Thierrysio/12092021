@@ -2,7 +2,7 @@
 
 namespace _12092021.Modeles
 {
-    class Adherent
+    public class Adherent
     {
         #region Attributs
 
