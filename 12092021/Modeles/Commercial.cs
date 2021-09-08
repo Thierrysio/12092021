@@ -15,6 +15,7 @@ namespace _12092021.Modeles
         private int _id;
         private string _nom;
         private string _prenom;
+        private List<Region> _lesRegions;
 
         #endregion
 
@@ -26,6 +27,8 @@ namespace _12092021.Modeles
             _id = id;
             _nom = nom;
             _prenom = prenom;
+            _lesRegions = new List<Region>();
+
         }
 
         #endregion
@@ -34,6 +37,7 @@ namespace _12092021.Modeles
         public int Id { get => _id; set => _id = value; }
         public string Nom { get => _nom; set => _nom = value; }
         public string Prenom { get => _prenom; set => _prenom = value; }
+        public List<Region> LesRegions { get => _lesRegions; set => _lesRegions = value; }
 
         #endregion
 
