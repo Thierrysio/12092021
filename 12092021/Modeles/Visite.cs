@@ -20,7 +20,7 @@ namespace _12092021.Modeles
         public Visite(DateTime heure)
         {
             Visite.CollClasse.Add(this);
-            _heure = heure;
+            _heure = heures;
         }
 
 
