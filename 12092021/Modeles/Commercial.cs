@@ -42,7 +42,21 @@ namespace _12092021.Modeles
         #endregion
 
         #region Methodes
-
+        public List<Region> GetRegionNonAffectée()
+        {
+            List<Region> resultat = null;
+            foreach(Region uneRegion in Region.CollClasse)
+            {
+                foreach(Region maRegion in this._lesRegions)
+                {
+                    if (uneRegion == maRegion)
+                    {
+                        resultat.Add(uneRegion);
+                    }
+                }
+            }
+            return resultat;
+        }
         #endregion
     }
 }
