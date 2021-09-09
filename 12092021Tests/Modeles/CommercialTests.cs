@@ -29,7 +29,7 @@ namespace _12092021.Modeles.Tests
             List<Region> resultatReel = C1.GetRegionNonAffectée();
             
 
-            Assert.AreEqual(3, resultatReel.Count);
+            Assert.AreEqual(resultatReel.Count,3);
         }
     }
 }
