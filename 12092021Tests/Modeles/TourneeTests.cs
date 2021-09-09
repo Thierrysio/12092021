@@ -14,7 +14,7 @@ namespace _12092021.Modeles.Tests
         [TestMethod()]
         public void GetNbreDeVisitesTest()
         {
-            Tournee T1 = new Tournee(new DateTime(2021, 09, 12),0);
+            Tournee T1 = new Tournee(new DateTime(2021, 09, 12), 0);
 
             Visite V1 = new Visite(new DateTime(2021, 09, 12, 11, 00, 00));
             Visite V2 = new Visite(new DateTime(2021, 09, 12, 12, 00, 00));
@@ -27,7 +27,19 @@ namespace _12092021.Modeles.Tests
 
             int resultat = T1.GetNbreDeVisites();
 
-            Assert.AreEqual(resultat,3);
+            Assert.AreEqual(resultat, 3);
+        }
+
+        [TestMethod()]
+        public void AffecterLaTourneeTest()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void GetVerificationExistenceTourneeTest()
+        {
+            Assert.Fail();
         }
     }
 }

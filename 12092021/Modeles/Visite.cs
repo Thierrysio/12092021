@@ -23,6 +23,8 @@ namespace _12092021.Modeles
             Visite.CollClasse.Add(this);
             _heure = heure;
             _lesPrestations = new List<Prestation>();
+
+            // A coder
         }
 
 
@@ -35,7 +37,15 @@ namespace _12092021.Modeles
         #endregion
 
         #region Methodes
-        
+        /// <summary>
+        /// Cette methode doit permettre d'affecter la visite 
+        /// courante à la tournée correspondante au jour indiqué
+        /// dans l'attribut _heure.
+        /// </summary>
+        public void AjoutTournee()
+        {
+            // Acoder
+        }
         #endregion
     }
 }

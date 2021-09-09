@@ -12,17 +12,19 @@ namespace _12092021.Modeles
         private string _nom;
         private string _prenom;
         private string _adresse;
+        private int kms;
 
         #endregion
 
         #region Constructeurs
-        public Adherent(int id, string nom, string prenom, string adresse)
+        public Adherent(int id, string nom, string prenom, string adresse, int kms)
         {
             Adherent.CollClasse.Add(this);
             _id = id;
             _nom = nom;
             _prenom = prenom;
             _adresse = adresse;
+            this.kms = kms;
         }
 
         #endregion
@@ -32,6 +34,7 @@ namespace _12092021.Modeles
         public string Nom { get => _nom; set => _nom = value; }
         public string Prenom { get => _prenom; set => _prenom = value; }
         public string Adresse { get => _adresse; set => _adresse = value; }
+        public int Kms { get => kms; set => kms = value; }
         #endregion
 
         #region Methodes

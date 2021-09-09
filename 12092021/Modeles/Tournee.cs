@@ -44,6 +44,25 @@ namespace _12092021.Modeles
         {
             return Visite.CollClasse.Count;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="param"> correspond à la visite à ajouter</param>
+        public void AjoutVisite(Visite param)
+        {
+            // A coder
+        }
+
+        public bool GetVerificationExistenceTournee(DateTime param)
+        {
+            bool resultat =false;
+            // A coder
+            return resultat;
+        }
+        public void AffecterLaTournee()
+        {
+            // A coder
+        }
         #endregion
     }
 }

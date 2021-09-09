@@ -11,7 +11,7 @@ namespace _12092021.Modeles.Tests
     [TestClass()]
     public class CommercialTests
     {
-        
+
         [TestMethod()]
         public void GetRegionNonAffectéeTest()
         {
@@ -27,9 +27,15 @@ namespace _12092021.Modeles.Tests
             C1.LesRegions.Add(R4);
 
             List<Region> resultatReel = C1.GetRegionNonAffectée();
-            
 
-            Assert.AreEqual(resultatReel.Count,3);
+
+            Assert.AreEqual(resultatReel.Count, 3);
+        }
+
+        [TestMethod()]
+        public void GetNbreKmsMoisTest()
+        {
+            Assert.Fail();
         }
     }
 }

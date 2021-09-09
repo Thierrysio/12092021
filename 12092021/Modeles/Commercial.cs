@@ -57,6 +57,13 @@ namespace _12092021.Modeles
             }
             return resultat;
         }
+
+        public int GetNbreKmsMois()
+        {
+            int resultat = 0;
+            // A coder
+            return resultat;
+        }
         #endregion
     }
 }
