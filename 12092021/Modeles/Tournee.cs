@@ -87,8 +87,37 @@ namespace _12092021.Modeles
         }
         public void AffecterLaTournee()
         {
-            // A coder
+            //mettre dans un dictionnaire les kilometres réalises
+            //par tous les commerciaux. Methode AjoutDictionnaireKmsRealises()
+            Dictionary<Commercial,int> monDictionnaire = this.AjoutDictionnaireKmsRealises();
         }
+
+        private Dictionary<Commercial,int> AjoutDictionnaireKmsRealises()
+        {
+            Dictionary<Commercial, int> resultat = new Dictionary<Commercial, int>();
+            foreach (Commercial unCommercial in Commercial.CollClasse)
+            {
+                resultat.Add(unCommercial, unCommercial.CalculKmsTourneeMoisCourant());
+            }
+            return resultat;
+        }
+
+        private Commercial QuiQuenAFaitLeMoinsCeMoisCi(Dictionary<Commercial, int> param)
+        {
+            Commercial resultat = null;
+            int val = int.MaxValue;
+            foreach (KeyValuePair<Commercial, int> pair in param)
+            {
+                if (pair.Value <val)
+                {
+                    resultat = pair.Key;
+                }
+            }
+
+            return resultat;
+        }
+
+
         #endregion
     }
 }

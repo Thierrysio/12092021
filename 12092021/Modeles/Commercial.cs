@@ -15,6 +15,7 @@ namespace _12092021.Modeles
         private int _id;
         private string _nom;
         private string _prenom;
+        private List<Tournee> _lesTournees;
         private List<Region> _lesRegions;
 
         #endregion
@@ -28,6 +29,7 @@ namespace _12092021.Modeles
             _nom = nom;
             _prenom = prenom;
             _lesRegions = new List<Region>();
+            _lesTournees = new List<Tournee>();
 
         }
 
@@ -38,10 +40,25 @@ namespace _12092021.Modeles
         public string Nom { get => _nom; set => _nom = value; }
         public string Prenom { get => _prenom; set => _prenom = value; }
         public List<Region> LesRegions { get => _lesRegions; set => _lesRegions = value; }
+        public List<Tournee> LesTournees { get => _lesTournees; set => _lesTournees = value; }
 
         #endregion
 
         #region Methodes
+
+        public int CalculKmsTourneeMoisCourant()
+        {
+            int resultat = 0;
+            foreach(Tournee uneTournee in this.LesTournees)
+            {
+                if(uneTournee.LaDate.Month == DateTime.Now.Month)
+                {
+                    resultat += uneTournee.KmsRealises;
+                }
+            }
+            return resultat;
+        }
+
 
         #endregion
     }
