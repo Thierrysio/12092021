@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _12092021.Modeles
 {
-    class Tournee
+    public class Tournee
     {
         #region Attributs
 
@@ -20,11 +20,11 @@ namespace _12092021.Modeles
 
         #region Constructeurs
 
-        public Tournee(DateTime laDate, int kmsRealises)
+        public Tournee(DateTime laDate)
         {
             Tournee.CollClasse.Add(this);
             _laDate = laDate;
-            _kmsRealises = kmsRealises;
+            _kmsRealises = 0;
             _lesVisites = new List<Visite>();
         }
 
@@ -40,7 +40,56 @@ namespace _12092021.Modeles
         #endregion
 
         #region Methodes
+        public int GetNbreDeVisites()
+        {
+            return this.LesVisites.Count;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="param"> correspond à la visite à ajouter</param>
+        public void AjoutVisite(Visite param)
+        {
+            
+            this.LesVisites.Add(param);
+            this.CalculKmsRealises();
+                
+        }
 
+        private int CalculKmsRealises()
+        {
+            int resultat = 0;
+            foreach(Visite uneVisite in this.LesVisites)
+            {
+                resultat += uneVisite.LAdherent.Kms;
+            }
+            return resultat;
+        }
+    
+
+    public static void CreerTournee(DateTime param)
+        {
+            new Tournee(param);
+        }
+
+        public static void CreerTourneeGestionVisite(DateTime param,  Visite param3)
+        {
+            new Tournee(param).AjoutVisite(param3);
+        }
+
+
+
+        public bool GetVerificationExistenceTournee(DateTime param)
+        {
+            bool resultat = false;
+            // A coder
+            return resultat;
+        }
+        public void AffecterLaTournee()
+        {
+            // A coder
+        }
         #endregion
     }
 }
+
