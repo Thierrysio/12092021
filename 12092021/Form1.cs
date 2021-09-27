@@ -29,7 +29,7 @@ namespace _12092021
 
             if (U1.GetType().Name == "Commercial")
             {
-                MessageBox.Show("ok");
+                MessageBox.Show(U1.parler());
             }
         }
     }

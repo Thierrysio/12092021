@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace _12092021.Modeles
 {
-    public class Utilisateur
+    public abstract class Utilisateur : ITest
     {
         #region Attributs
 
         public static List<Utilisateur> CollClasse = new List<Utilisateur>();
-        private int _id;
-        private string _nom;
-        private string _prenom;
+        protected int _id;
+        protected string _nom;
+        protected string _prenom;
         #endregion
 
         #region Constructeurs
 
 
 
-        public Utilisateur(int id, string nom, string prenom)
+         public Utilisateur(int id, string nom, string prenom)
         {
             _id = id;
             _nom = nom;
@@ -33,13 +33,32 @@ namespace _12092021.Modeles
         #endregion
 
         #region Getters/Setters
-        public int Id { get => _id; set => _id = value; }
-        public string Nom { get => _nom; set => _nom = value; }
-        public string Prenom { get => _prenom; set => _prenom = value; }
+        public abstract int Id { get; set; }
+        public abstract string Nom { get; set; }
+        public abstract string Prenom { get; set; }
 
         #endregion
 
         #region Methodes
+
+        public string nager()
+        {
+            return "je nage";
+        }
+
+        public virtual string parler()
+        {
+           
+            return "ok utilisateur";
+        }
+        
+        public abstract string marcher();
+
+        public int tester()
+        {
+            return 3;
+        }
+
 
         #endregion
     }

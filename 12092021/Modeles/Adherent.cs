@@ -26,13 +26,42 @@ namespace _12092021.Modeles
         #endregion
 
         #region Getters/Setters
+        public override int Id
+        {
+            get { return Id; }
+            set { Id = value; }
+        }
+        public override string Nom
+        {
+            get { 
+                return Nom; 
+            }
+            set { 
+                
+                
+                Nom = value.ToUpper() ; 
+            }
+        }
+        public override string Prenom
+        {
+            get { return Prenom; }
+            set { Prenom = value; }
+        }
         public string Adresse { get => _adresse; set => _adresse = value; }
         public int Kms { get => _kms; set => _kms = value; }
 
         #endregion
 
         #region Methodes
+        public override string parler()
+        {
 
+            return "ok adherent";
+        }
+        public override string marcher()
+        {
+            return "je marche vite";
+        }
         #endregion
     }
 }

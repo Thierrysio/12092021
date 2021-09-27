@@ -52,12 +52,14 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ITest.cs" />
     <Compile Include="Modeles\Adherent.cs" />
     <Compile Include="Modeles\Commercial.cs" />
     <Compile Include="Modeles\Prestation.cs" />
     <Compile Include="Modeles\Region.cs" />
     <Compile Include="Modeles\Tournee.cs" />
     <Compile Include="Modeles\TypePrestation.cs" />
+    <Compile Include="Modeles\TypeRepas.cs" />
     <Compile Include="Modeles\Utilisateur.cs" />
     <Compile Include="Modeles\Visite.cs" />
     <Compile Include="Program.cs" />

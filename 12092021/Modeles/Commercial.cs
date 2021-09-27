@@ -12,6 +12,7 @@ namespace _12092021.Modeles
 
         public static List<Commercial> CollClasse = new List<Commercial>();
 
+        private Dictionary<TypeRepas, double> _typeResto;
         
         private List<Tournee> _lesTournees;
         private List<Region> _lesRegions;
@@ -22,11 +23,11 @@ namespace _12092021.Modeles
 
         #region Constructeurs
 
-        public Commercial(int id, string nom, string prenom) : base(id, nom, prenom)
+        public Commercial(int id, string nom, string prenom) : base(id , nom, prenom)
         {
             _lesTournees = new List<Tournee>();
             _lesRegions = new List<Region>();
-
+            _typeResto = new Dictionary<TypeRepas, double>();
             Commercial.CollClasse.Add(this);
         }
 
@@ -35,8 +36,24 @@ namespace _12092021.Modeles
         #endregion
 
         #region Getters/Setters
+        public override int Id
+        {
+            get { return Id; }
+            set { Id = value; }
+        }
+        public override string Nom
+        {
+            get { return Nom; }
+            set { Nom = value; }
+        }
+        public override string Prenom
+        {
+            get { return Prenom; }
+            set { Prenom = value; }
+        }
         public List<Tournee> LesTournees { get => _lesTournees; set => _lesTournees = value; }
         public List<Region> LesRegions { get => _lesRegions; set => _lesRegions = value; }
+        public Dictionary<TypeRepas, double> TypeResto { get => _typeResto; set => _typeResto = value; }
 
         #endregion
 
@@ -53,6 +70,17 @@ namespace _12092021.Modeles
                 }
             }
             return resultat;
+        }
+
+        public override string parler()
+        {
+
+            return "ok commercial";
+        }
+
+        public override string marcher()
+        {
+            return "je marche lentement";
         }
 
 

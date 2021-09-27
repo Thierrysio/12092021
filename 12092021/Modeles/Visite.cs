@@ -23,9 +23,8 @@ namespace _12092021.Modeles
             Visite.CollClasse.Add(this);
             _heure = heure;
             _lesPrestations = new List<Prestation>();
-
+            _lAdherent =  lAdherent;
             this.AjoutTournee();
-            _lAdherent = lAdherent;
         }
 
 
@@ -34,7 +33,7 @@ namespace _12092021.Modeles
         #region Getters/Setters
         public DateTime Heure { get => _heure; set => _heure = value; }
         public List<Prestation> LesPrestations { get => _lesPrestations; set => _lesPrestations = value; }
-        internal Adherent LAdherent { get => _lAdherent; set => _lAdherent = value; }
+        public  Adherent LAdherent { get => _lAdherent; set => _lAdherent = value; }
 
         #endregion
 
@@ -63,6 +62,18 @@ namespace _12092021.Modeles
             }
 
             if (param == true) Tournee.CreerTourneeGestionVisite(this.Heure, this);
+        }
+
+        public double montantAFacturer()
+        {
+            double resultat = 0;
+
+            foreach(Prestation unePrestation in this.LesPrestations)
+            {
+                resultat += unePrestation.GetTarifPrestation();
+            }
+
+            return resultat;
         }
         #endregion
     }

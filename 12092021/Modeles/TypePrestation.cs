@@ -34,7 +34,10 @@ namespace _12092021.Modeles
         #endregion
 
         #region Methodes
-
+        public double GetPrixForfaitaire()
+        {
+            return this.PrixForfaitaire;
+        }
         #endregion
     }
 }
