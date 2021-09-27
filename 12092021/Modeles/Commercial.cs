@@ -6,41 +6,37 @@ using System.Threading.Tasks;
 
 namespace _12092021.Modeles
 {
-    public class Commercial
+    public class Commercial : Utilisateur
     {
         #region Attributs
 
         public static List<Commercial> CollClasse = new List<Commercial>();
 
-        private int _id;
-        private string _nom;
-        private string _prenom;
+        
         private List<Tournee> _lesTournees;
         private List<Region> _lesRegions;
+
+
 
         #endregion
 
         #region Constructeurs
 
-        public Commercial(int id, string nom, string prenom)
+        public Commercial(int id, string nom, string prenom) : base(id, nom, prenom)
         {
-            Commercial.CollClasse.Add(this);
-            _id = id;
-            _nom = nom;
-            _prenom = prenom;
-            _lesRegions = new List<Region>();
             _lesTournees = new List<Tournee>();
+            _lesRegions = new List<Region>();
 
+            Commercial.CollClasse.Add(this);
         }
+
+
 
         #endregion
 
         #region Getters/Setters
-        public int Id { get => _id; set => _id = value; }
-        public string Nom { get => _nom; set => _nom = value; }
-        public string Prenom { get => _prenom; set => _prenom = value; }
-        public List<Region> LesRegions { get => _lesRegions; set => _lesRegions = value; }
         public List<Tournee> LesTournees { get => _lesTournees; set => _lesTournees = value; }
+        public List<Region> LesRegions { get => _lesRegions; set => _lesRegions = value; }
 
         #endregion
 
