@@ -98,11 +98,11 @@ namespace _12092021.Modeles
         {
             if (this.TypeResto.ContainsKey(param1))
             {
-                
+                this.TypeResto[param1] += param2;
             }
             else
             {
-
+                this.TypeResto.Add(param1, param2);
             }
         }
 
