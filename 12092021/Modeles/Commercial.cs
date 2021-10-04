@@ -12,7 +12,6 @@ namespace _12092021.Modeles
 
         public static List<Commercial> CollClasse = new List<Commercial>();
 
-        private Dictionary<TypeRepas, double> _typeResto;
         
         private List<Tournee> _lesTournees;
         private List<Region> _lesRegions;
@@ -27,7 +26,7 @@ namespace _12092021.Modeles
         {
             _lesTournees = new List<Tournee>();
             _lesRegions = new List<Region>();
-            _typeResto = new Dictionary<TypeRepas, double>();
+            
             Commercial.CollClasse.Add(this);
         }
 
@@ -53,7 +52,6 @@ namespace _12092021.Modeles
         }
         public List<Tournee> LesTournees { get => _lesTournees; set => _lesTournees = value; }
         public List<Region> LesRegions { get => _lesRegions; set => _lesRegions = value; }
-        public Dictionary<TypeRepas, double> TypeResto { get => _typeResto; set => _typeResto = value; }
 
         #endregion
 
