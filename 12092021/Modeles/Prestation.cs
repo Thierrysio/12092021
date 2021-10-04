@@ -58,6 +58,24 @@ namespace _12092021.Modeles
         {
             Dictionary<MicroTache, int> resultat = new Dictionary<MicroTache, int>();
 
+            foreach( var pair0 in this.DicoNbreActivites)
+            {
+                foreach(var pair1 in pair0.Key.DicoNbreTaches)
+                {
+                    foreach(var pair2 in pair1.Key.DicoNbreMicroTaches)
+                    {
+                        if (resultat.ContainsKey(pair2.Key))
+                        {
+                            resultat[pair2.Key] += pair2.Value *pair1.Value * pair0.Value;
+                        }
+                        else
+                        {
+                            resultat.Add(pair2.Key, pair2.Value * pair1.Value * pair0.Value);
+                        }
+                    }
+                }
+            }
+
             return resultat;
         }
         #endregion
