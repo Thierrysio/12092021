@@ -57,6 +57,7 @@
     <Compile Include="Modeles\Commercial.cs" />
     <Compile Include="Modeles\Prestation.cs" />
     <Compile Include="Modeles\Region.cs" />
+    <Compile Include="Modeles\Restaurant.cs" />
     <Compile Include="Modeles\Tournee.cs" />
     <Compile Include="Modeles\TypePrestation.cs" />
     <Compile Include="Modeles\TypeRepas.cs" />

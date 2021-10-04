@@ -15,7 +15,7 @@ namespace _12092021.Modeles
         
         private List<Tournee> _lesTournees;
         private List<Region> _lesRegions;
-
+        private Dictionary<Restaurant, int> _typeResto;
 
 
         #endregion
@@ -26,7 +26,7 @@ namespace _12092021.Modeles
         {
             _lesTournees = new List<Tournee>();
             _lesRegions = new List<Region>();
-            
+            _typeResto = new Dictionary<Restaurant, int>();
             Commercial.CollClasse.Add(this);
         }
 
@@ -52,6 +52,7 @@ namespace _12092021.Modeles
         }
         public List<Tournee> LesTournees { get => _lesTournees; set => _lesTournees = value; }
         public List<Region> LesRegions { get => _lesRegions; set => _lesRegions = value; }
+        public Dictionary<Restaurant, int> TypeResto { get => _typeResto; set => _typeResto = value; }
 
         #endregion
 
@@ -81,6 +82,29 @@ namespace _12092021.Modeles
             return "je marche lentement";
         }
 
+        public int GetMontantRestaurantMois()
+        {
+            int resultat = 0;
+
+            foreach (var pair in this.TypeResto)
+            {
+                resultat += pair.Value;
+            }
+
+            return resultat;
+        }
+
+        public void AjoutAuDicoTypeResto(Restaurant param1,int param2)
+        {
+            if (this.TypeResto.ContainsKey(param1))
+            {
+                
+            }
+            else
+            {
+
+            }
+        }
 
         #endregion
     }
