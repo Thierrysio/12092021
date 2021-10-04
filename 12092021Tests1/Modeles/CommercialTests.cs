@@ -30,7 +30,7 @@ namespace _12092021.Modeles.Tests
             // test methode
             int expected = COM1.GetMontantRestaurantMois();
             // Assert
-            Assert.AreEqual(expected, 20);
+            Assert.AreEqual(expected, 60);
         }
     }
 }
