@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _12092021.Modeles
 {
-    class Locataire
+    public class Locataire
     {
         #region Attributs
 
@@ -36,9 +36,21 @@ namespace _12092021.Modeles
         public bool AjoutLocationAppartement(Semaine param,Appartement param2)
         {
             bool resultat = false;
-            // Est ce que l'appartement est libre cette semaine ?
+           // Est ce que l'appartement est libre cette semaine ?
             // Ajout de l'appartement dans le dico.
 
+            foreach ( Locataire unLocataire in Locataire.CollClasse)
+            {
+                foreach(var pair in unLocataire.DicoLocation)
+                {
+                    if ((pair.Key == param) && (pair.Value == param2))
+                        {
+                        return true;
+                    }
+                }
+                
+            }
+            if (resultat == false) this.DicoLocation.Add(param, param2);
 
             return resultat;
         }
