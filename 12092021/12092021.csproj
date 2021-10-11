@@ -57,8 +57,11 @@
     <Compile Include="Modeles\Adherent.cs" />
     <Compile Include="Modeles\Appartement.cs" />
     <Compile Include="Modeles\Commercial.cs" />
+    <Compile Include="Modeles\Emplacement.cs" />
     <Compile Include="Modeles\Locataire.cs" />
+    <Compile Include="Modeles\Louer.cs" />
     <Compile Include="Modeles\MicroTache.cs" />
+    <Compile Include="Modeles\Periode.cs" />
     <Compile Include="Modeles\Prestation.cs" />
     <Compile Include="Modeles\Region.cs" />
     <Compile Include="Modeles\Restaurant.cs" />

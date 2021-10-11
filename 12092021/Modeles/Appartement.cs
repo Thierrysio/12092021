@@ -12,16 +12,18 @@ namespace _12092021.Modeles
 
         public static List<Appartement> CollClasse = new List<Appartement>();
         private string _nom;
+        private Emplacement _lEmplacement;
         private Dictionary<Semaine, Locataire> _dicoLocation;
         #endregion
 
         #region Constructeurs
 
-        public Appartement(string nom)
+        public Appartement(string nom, Emplacement lEmplacement)
         {
             Appartement.CollClasse.Add(this);
             _nom = nom;
             _dicoLocation = new Dictionary<Semaine, Locataire>();
+            _lEmplacement = lEmplacement;
         }
 
         #endregion
@@ -29,6 +31,7 @@ namespace _12092021.Modeles
         #region Getters/Setters
         public string Nom { get => _nom; set => _nom = value; }
         public Dictionary<Semaine, Locataire> DicoLocation { get => _dicoLocation; set => _dicoLocation = value; }
+        public Emplacement LEmplacement { get => _lEmplacement; set => _lEmplacement = value; }
 
         #endregion
 
