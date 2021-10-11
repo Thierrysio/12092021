@@ -55,11 +55,14 @@
     <Compile Include="ITest.cs" />
     <Compile Include="Modeles\Activite.cs" />
     <Compile Include="Modeles\Adherent.cs" />
+    <Compile Include="Modeles\Appartement.cs" />
     <Compile Include="Modeles\Commercial.cs" />
+    <Compile Include="Modeles\Locataire.cs" />
     <Compile Include="Modeles\MicroTache.cs" />
     <Compile Include="Modeles\Prestation.cs" />
     <Compile Include="Modeles\Region.cs" />
     <Compile Include="Modeles\Restaurant.cs" />
+    <Compile Include="Modeles\Semaine.cs" />
     <Compile Include="Modeles\Tache.cs" />
     <Compile Include="Modeles\Tournee.cs" />
     <Compile Include="Modeles\TypePrestation.cs" />
